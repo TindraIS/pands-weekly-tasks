@@ -18,10 +18,11 @@ amount1 = int(input("Please enter amount 1 (in cent): "))
 
 # nest float() to get the floating point value, divide amount1 by 100 to convert from cents to euros, and use an f-string formatting to display the amount with two decimal places
 amount1_float = float(f'{amount1/100:.2f}')
-print(amount1_float)
+# print(amount1_float) to be uncommented for debugging
 
 # prompt the user to insert second amount & nest variable with int() method to convert string into integer
 amount2= int(input("Please enter amount 2 (in cent): "))
+# print(amount2_float) to be uncommented for debugging
 
 # nest float() to get the floating point value, divide amount1 by 100 to convert from cents to euros, and use an f-string formatting to display the amount with two decimal places
 amount2_float = float(f'{amount2/100:.2f}')
