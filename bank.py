@@ -6,29 +6,19 @@
     ## Adds the two amounts
     ## Prints out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
 # Author: Irina Simoes
-# Version: 1.0
 # Date: 04/02/2024
 
 #######################################################
 
 
-
-# prompt the user to insert first amount & nest variable with int() method to convert string into integer
+# prompt the user to insert the amounts & nest int() method to convert the string into an integer so that the user's input can be treated as numerical data
+    # as stated in https://www.w3schools.com/python/python_user_input.asp
 amount1 = int(input("Please enter amount 1 (in cent): "))
-
-# nest float() to get the floating point value, divide amount1 by 100 to convert from cents to euros, and use an f-string formatting to display the amount with two decimal places
-amount1_float = float(f'{amount1/100:.2f}')
-# print(amount1_float) to be uncommented for debugging
-
-# prompt the user to insert second amount & nest variable with int() method to convert string into integer
 amount2= int(input("Please enter amount 2 (in cent): "))
-# print(amount2_float) to be uncommented for debugging
 
-# nest float() to get the floating point value, divide amount1 by 100 to convert from cents to euros, and use an f-string formatting to display the amount with two decimal places
-amount2_float = float(f'{amount2/100:.2f}')
+# sum the amounts and divide the result by 100 to convert the total from cents to euros, as 100 cents make up 1 euro
+amounts_sum = (amount1 + amount2)/100
 
-# sum the amounts
-amounts_sum = amount1_float + amount2_float
-
-# print the above float number in a human readable format and format it with the euro symbol using an f-string
+# print the result to the console and format it with the euro symbol using an f-string, which allows for embedding Python expressions inside string constants
+    # as explained in Python String Formatting Best Practices article by Dan Bader published in https://realpython.com/python-string-formatting/
 print(f'The sum of the two amounts is €{amounts_sum}')
