@@ -6,7 +6,8 @@
     ## Adds the two amounts
     ## Prints out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
 # Author: Irina Simoes
-# Date: 04/02/2024
+# Date created: 04/02/2024
+# Version: 3.0
 
 #######################################################
 
