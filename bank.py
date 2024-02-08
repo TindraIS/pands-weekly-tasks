@@ -20,8 +20,8 @@ amount2= int(input("Please enter amount 2 (in cent): "))
 # sum the amounts and divide the result by 100 to convert the total from cents to euros, as 100 cents make up 1 euro
 amounts_sum = (amount1 + amount2)/100
 
-# print the result to the console ensuring its consistency and readbility: 
-    # A. format it with the euro symbol with an f-string, which allows for embedding Python expressions inside string constants
+# print the result to the console ensuring its consistency and readability: 
+    # A. format it with the euro symbol with an f-string, which allows Python expressions to be embedded inside string constants
         ## Reference: Python String Formatting Best Practices article by Dan Bader published in https://realpython.com/python-string-formatting/
     
     # B. use Python's Format Specification Mini-Language to set commas as thousands separators and 2 decimal points. 
