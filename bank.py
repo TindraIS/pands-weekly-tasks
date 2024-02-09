@@ -43,7 +43,8 @@ euros = f'{(amounts_sum//100):,}'
 # 2. Use Python's Format Specification Mini-Language to set 2 decimal points:
     ## Setting the decimal precision will ensure consistency and uniformity in the output's values, adding a leading zero if the result is <10.
     ## Without the precision field, depending on how many cents are specified, the result could have either 1 or 2 decimal points.
-    ## Reference: Python's Format Mini-Language for Tidy Strings by Leodanis Pozo Ramos published in https://realpython.com/python-format-mini-language/
+    ## References: Python's Format Mini-Language for Tidy Strings by Leodanis Pozo Ramos published in https://realpython.com/python-format-mini-language/
+    ## and https://www.geeksforgeeks.org/how-to-add-leading-zeros-to-a-number-in-python/
 cents = f'{(amounts_sum%100):02d}'
 
 
