@@ -4,7 +4,7 @@
 # Description: 
     ## Prompts the user to enter a 10 digit account number and reads in
     ## Outputs the account number with only the last 4 digits showing, replacing the first 6 digits with Xs
-    ## It is assumed that users' input may not comply with the requested parameter, either because of data type or length
+    ## It is assumed that account numbers can only have 10 digits and that users' input may not comply with the such parameters, either because of type or length
 # Author: Irina Simoes
 # Date created: 09/02/2024
 # Version: 1.0
