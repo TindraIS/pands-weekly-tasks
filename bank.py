@@ -25,8 +25,8 @@ References:
     * https://www.w3schools.com/python/python_tuples_access.asp
 ------------------------------------------------------------------------------------------------------
 '''
-# Import template class from Python’s built-in string module to print the final result
-from string import string
+# Import string module to print the final result
+import string
 
 # Prompt the user to insert the amounts and cast the variable into a integer so that the user's input 
 # can be treated as numerical data
