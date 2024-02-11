@@ -2,17 +2,17 @@
 ------------------------------------------------------------------------------------------------------
 Name: bank.py
 Description: 
-    - While ensure floating-values are not computed due to loss of precision, 
+    - While ensuring floating-values are not computed due to loss of precision, 
     prompt the user and read in two money amounts (in cent) and add the two amounts.
     - Print out the answer in a human readable format with a € sign and decimal point 
     between the euro and cent of the amount.
     - Problem statement references: 
         * https://realpython.com/python-fractions/
         * https://docs.python.org/3/tutorial/floatingpoint.html
-# Author: Irina Simoes
-# Date created: 04/02/2024
-# Version: 5.0
-# References: 
+Author: Irina Simoes
+Date created: 04/02/2024
+Version: 5.0
+References: 
     * https://www.w3schools.com/python/python_user_input.asp
     * https://www.w3schools.com/python/python_casting.asp
     * https://realpython.com/python-string-formatting/ 
@@ -34,7 +34,7 @@ amount1 = int(input("Please enter amount 1 (in cent): "))
 amount2= int(input("Please enter amount 2 (in cent): "))
 
 # We make use of divmod() built-in function to get the quotient and the remainder of dividing the inputs by 100,
-# as 100 cents make up 1 euro. This ensures floating point numbers are not used, even if indirectly.
+# as 100 cents make up 1 euro. The result is the same as (a // b, a % b), thus ensuring floating point numbers are not used, even if indirectly.
 # The floor division (first element) ouputs the euro value:
     # The logic is that this operator returns the same type of the argument passed by default and since
     # we have above converted the variable to an integer, the output will be forcibly  be an integer as well. 
