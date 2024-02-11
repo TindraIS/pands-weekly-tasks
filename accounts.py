@@ -18,6 +18,7 @@ References:
     * https://realpython.com/python-strings/
     * https://docs.python.org/3/library/functions.html#len   
     * https://www.w3schools.com/python/python_strings_slicing.asp
+    * https://www.geeksforgeeks.org/create-multiple-copies-of-a-string-in-python-by-using-multiplication-operator/
 ----------------------------------------------------------------------
 ''' 
 
@@ -32,15 +33,18 @@ while True:
     account_no = input("Please enter a 10-digit account number: ").strip().replace(" ", "")
 
     if account_no.isdigit() and len(account_no) == 10:
-    # If a valid input is provided, the first 6 digits are replaced with Xs and the concealed account no. is displayed
-        concealed_account_no = 'X' * 6 + account_no[-4:]
-        print("Concealed account number:", concealed_account_no)
+    # If a valid input is provided, the first 6 digits are replaced with Xs and the concealed account no. is displayed:
+        # {'X' * 6) creates a string of 6 Xs, as the * operator, when applied to a string, repeats that string the specified number of times
+        # [-4:] is a negative indexing which slices numbers starting from the 4th character from the end of the string
+        concealed_account_no = 'X'* 6 + account_no[-4:]
+        print(f'Concealed account number: {concealed_account_no}')
+
         # The break statement is then used to exit the loop & finish the program, as the rest of the code won't apply
         break
 
     # If the provided account no. isn't valid, check if any of the below conditions are met and give instructions on how to fix the error
     elif not account_no.isdigit():
-        print("Error: Account number contains non-digit characters.")
+        print("Error: Account number contains non-digit characters or is empty.")
 
     elif len(account_no) > 10:
         print("Error: Account number contains more than 10 digits.")
@@ -48,9 +52,6 @@ while True:
     elif len(account_no) < 10:
         print("Error: Account number contains less than 10 digits.")
     
-    elif len(account_no) == 0:
-        print("Error: Account number field is empty.")
-
     # If the account no. isn't valid because of a constraint other than the ones specified above, a generic message is displayed
     else:
         print("Error: Please enter a valid 10-digit account number.")
