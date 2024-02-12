@@ -23,8 +23,8 @@
 
 ### Week 02: bank.py
 
-    When Banks are storing currency figures, they store them as integers (usually in cent). This is to avoid rounding errors. 
-    Write a program called bank.py The program should:
+    When Banks are storing currency figures, they store them as integers (usually in cent). 
+    This is to avoid rounding errors. Write a program called bank.py The program should:
         * Prompt the user and read in two money amounts (in cent)
         * Add the two amounts
         * Print out the answer in a human readable format with a 
@@ -33,7 +33,7 @@
 
 ##### Rationale
 
-Problem solving inspiration in a [Stack Overflow question](https://stackoverflow.com/questions/71041895/using-floor-division-and-modulo-together )
+Problem solving inspiration in a [Stack Overflow question](https://stackoverflow.com/questions/71041895/using-floor-division-and-modulo-together)
 
 
 ##### References
