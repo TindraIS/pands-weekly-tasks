@@ -1,16 +1,30 @@
-# Programming & Scripting Weekly Tasks
-
+# Programming & Scripting
+## Author: I. Simoes
+###### This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU 
 
 
 ## Table of contents
+
+* [Repository Stats](#Repository-Stats)
 * [Weekly Tasks](#Weekly-Tasks)
     * [bank.py](#bankpy)
     * [accounts.py](#accountspy)
 
+<br>
+<br>
+
+## Repository Stats
+
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=tindrais)](https://github.com/tindrais)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=tindrais&layout=compact)](https://github.com/tindrais)
+
+<br>
+<br>
 
 ## Weekly Tasks
 
-### ***bank.py***
+### ***Week 02: bank.py***
 
     When Banks are storing currency figures, they store them as integers (usually in cent).This is to avoid rounding errors. Write a program called bank.py The program should:
         * Prompt the user and read in two money amounts (in cent)
@@ -19,6 +33,7 @@
 
 
 #### Rationale
+
 Problem solving inspiration: https://stackoverflow.com/questions/71041895/using-floor-division-and-modulo-together 
 
 
@@ -39,7 +54,7 @@ Problem solving inspiration: https://stackoverflow.com/questions/71041895/using-
     </p>
 </details>
 
-
+---
 
 ### ***accounts.py***
 
@@ -66,3 +81,4 @@ While reading about the len function found some examples with while loops
     </p>
 </details>
 
+---
