@@ -10,39 +10,43 @@ Author: Irina Simoes
 Date created: 09/02/2024
 Version: 2.0
 References:
-    * https://realpython.com/len-python-function/
-    * https://docs.python.org/3/library/stdtypes.html#str.isdigit
     * https://www.w3schools.com/python/python_tuples_access.asp
     * https://www.w3schools.com/python/python_strings_escape.asp
+    * https://www.w3schools.com/python/python_conditions.asp
+    * https://www.w3schools.com/python/python_strings_slicing.asp
     * https://realpython.com/python-while-loop/ 
     * https://realpython.com/python-strings/
-    * https://docs.python.org/3/library/functions.html#len   
-    * https://www.w3schools.com/python/python_strings_slicing.asp
+    * https://realpython.com/len-python-function/
+    * https://docs.python.org/3/library/functions.html#len
+    * https://docs.python.org/3/library/stdtypes.html#str.isdigit
     * https://www.geeksforgeeks.org/create-multiple-copies-of-a-string-in-python-by-using-multiplication-operator/
 ----------------------------------------------------------------------
 ''' 
 
 # With a while loop we repeatedly prompt the user to enter a 10 digit account no. until a valid input is provided
 while True:
-    # Keeping the input() function within the while loop allows an indefinite iteration until the account no. conditions are met:
-        # the input should only contain digits -> checked with isdigit()
-        # account no. shouldn't have more than 10 characters -> checked wioth len()
-    # To avoid asking users to enter a valid account no. multiple times, a normalisation is computed:
+    # Keeping the input() function within the while loop allows an indefinite iteration until the account no. is valid
+    # To avoid asking users to enter a valid account no. multiple times, a normalisation is computed right off the bat:
         # .strip() method removes any leading or trailing whitespaces
         # .replace() method removes any remaining whitespace characters within the string
     account_no = input("Please enter a 10-digit account number: ").strip().replace(" ", "")
 
+    # The data validation above mentioned is done with an if statement:
+        # the input should only contain digits -> checked with isdigit()
+        # account no. shouldn't have more than 10 characters -> checked with len()
     if account_no.isdigit() and len(account_no) == 10:
-    # If a valid input is provided, the first 6 digits are replaced with Xs and the concealed account no. is displayed:
-        # {'X' * 6) creates a string of 6 Xs, as the * operator, when applied to a string, repeats that string the specified number of times
-        # [-4:] is a negative indexing which slices numbers starting from the 4th character from the end of the string
+
+    # If the above is true, the concealed account no. is displayed with a concatenation using the plus operator.
+    # Differently from int and float types, where arithmetic is computed, te below two operands are joined together:
+        # {'X' * 6) creates a string of 6 Xs as the * operator, when applied to a string, creates multiple copies of that same string
+        # [-4:] is a negative indexing which extracts numbers starting from the end of the string (indexing )
         concealed_account_no = 'X'* 6 + account_no[-4:]
         print(f'Concealed account number: {concealed_account_no}')
 
         # The break statement is then used to exit the loop & finish the program, as the rest of the code won't apply
         break
 
-    # If the provided account no. isn't valid, check if any of the below conditions are met and give instructions on how to fix the error
+    # If the provided account no. isn't valid, check if any of the below conditions are met with elif and give instructions on how to fix the error
     elif not account_no.isdigit():
         print("Error: Account number contains non-digit characters or is empty.")
 
