@@ -2,6 +2,7 @@
 ## Author: I. Simoes
 ###### This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU 
 
+<br>
 
 ## Table of contents
 
@@ -11,7 +12,6 @@
     * [accounts.py](#accountspy)
 
 <br>
-<br>
 
 ## Repository Stats
 
@@ -19,7 +19,6 @@
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=tindrais&layout=compact)](https://github.com/tindrais)
 
-<br>
 <br>
 
 ## Weekly Tasks
@@ -32,12 +31,12 @@
         * Print out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
 
 
-#### Rationale
+##### * Rationale
 
 Problem solving inspiration: https://stackoverflow.com/questions/71041895/using-floor-division-and-modulo-together 
 
 
-#### References
+##### * References
 <details>
            <summary>The below resources were used to solve the task problem:</summary>
            <p>
@@ -54,6 +53,7 @@ Problem solving inspiration: https://stackoverflow.com/questions/71041895/using-
     </p>
 </details>
 
+<br>
 ---
 
 ### ***accounts.py***
@@ -62,12 +62,12 @@ Problem solving inspiration: https://stackoverflow.com/questions/71041895/using-
     Write a python program called accounts.py that reads in a 10 character account number and outputs the account number with only the last 4 digits showing (and the first 6 digits replaced with Xs).
 
 
-#### Rationale
+##### * Rationale
 Problem solving inspiration: https://realpython.com/len-python-function/
 While reading about the len function found some examples with while loops
 
 
-#### References
+##### * References
 <details>
            <summary>The below resources were used to solve the task problem:</summary>
            <p>
@@ -81,4 +81,5 @@ While reading about the len function found some examples with while loops
     </p>
 </details>
 
+<br>
 ---
