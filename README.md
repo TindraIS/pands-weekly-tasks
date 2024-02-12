@@ -1,6 +1,8 @@
 # Programming & Scripting
-## Author: I. Simoes
-###### This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU 
+###### ***This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU ***
+
+###### Author: I. Simoes
+
 
 <br>
 
@@ -54,6 +56,7 @@ Problem solving inspiration: https://stackoverflow.com/questions/71041895/using-
 </details>
 
 <br>
+
 ---
 
 ### ***accounts.py***
@@ -82,4 +85,5 @@ While reading about the len function found some examples with while loops
 </details>
 
 <br>
+
 ---
