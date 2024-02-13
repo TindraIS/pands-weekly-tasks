@@ -1,6 +1,6 @@
-<picture align="center">
-    <img alt="README Logo" src="https://raw.githubusercontent.com/TindraIS/pands-weekly-tasks/main/Images/readme_header.png">
-</picture>
+<div align="center">
+<img src="https://raw.githubusercontent.com/TindraIS/pands-weekly-tasks/main/Images/readme_header.png" align="center" style="width: 100%" />
+</div>  
 
 
 ###### __This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU__
