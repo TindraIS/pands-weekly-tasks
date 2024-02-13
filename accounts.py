@@ -48,7 +48,7 @@ while True:
 
     # If the provided account no. isn't valid, check if any of the below conditions are met with elif and give instructions on how to fix the error
     elif not account_no.isdigit():
-        print("Error: Account number contains non-digit characters or is empty.")
+        print("Error:Account number contains non-digit characters or is empty.")
 
     elif len(account_no) > 10:
         print("Error: Account number contains more than 10 digits.")
