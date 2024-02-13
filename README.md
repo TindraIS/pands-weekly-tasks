@@ -3,15 +3,16 @@
 </div>  
 
 
-###### __This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU__
+###### __This repository contains the solutions for the weekly tasks of Programme & Scripting module @ ATU__
 
 
 ## Table of contents
 
-* [Repository Stats](#Repository-Stats)
 * [Weekly Tasks](#Weekly-Tasks)
-    * [bank.py](#bankpy)
-    * [accounts.py](#accountspy)
+    * [helloworld.py](#01:-helloworldpy)
+    * [bank.py](#02:-bankpy)
+    * [accounts.py](#03:-accountspy)
+    * [collatz.py](#04:-collatzpy)
 
 <br>
 
@@ -19,6 +20,9 @@
 
 ### 01: helloworld.py
 
+<br>
+
+---
 
 ### 02: bank.py
 
@@ -32,12 +36,12 @@
 
 ##### Rationale
 
-Problem solving inspiration in a [Stack Overflow question](https://stackoverflow.com/questions/71041895/using-floor-division-and-modulo-together)
+Problem solving approach based on a [Stack Overflow question](https://stackoverflow.com/questions/71041895/using-floor-division-and-modulo-together)
 
 
 ##### References
 <details>
-           <summary>The below resources were used to solve the task problem:</summary>
+           <summary>The below resources were used to solve the task:</summary>
            <p>
 
 * https://www.w3schools.com/python/python_user_input.asp
@@ -52,7 +56,7 @@ Problem solving inspiration in a [Stack Overflow question](https://stackoverflow
 
 * https://realpython.com/python-modulo-operator/ 
 
-* https://www.geeksforgeeks.org how-to-add-leading-zeros-to-a-number-in-python/
+* https://www.geeksforgeeks.org/how-to-add-leading-zeros-to-a-number-in-python/
 
 * https://docs.python.org/3/library/functions.html#divmod
 
@@ -69,18 +73,20 @@ Problem solving inspiration in a [Stack Overflow question](https://stackoverflow
 
 ### 03: accounts.py
 
-    Bank account numbers can stored as 10 character strings, for security reasons some applications only display the last 4 characters (with the other other characters replaced with Xs).
-    Write a python program called accounts.py that reads in a 10 character account number and outputs the account number with only the last 4 digits showing (and the first 6 digits replaced with Xs).
+    Bank account numbers can stored as 10 character strings, for security reasons some 
+    applications only display the last 4 characters (with the other other characters replaced with Xs).
+    Write a python program called accounts.py that reads in a 10 character account number and outputs 
+    the account number with only the last 4 digits showing (and the first 6 digits replaced with Xs).
 
 
 ##### Rationale
-Problem solving inspiration: https://realpython.com/len-python-function/
-While reading about the len function found some examples with while loops
+Problem solving approach based on the ```len()``` function article in [Real Python](https://realpython.com/len-python-function/)
+which contains a few examples with while loops.
 
 
 ##### References
 <details>
-           <summary>The below resources were used to solve the task problem:</summary>
+           <summary>The below resources were used to solve the task:</summary>
            <p>
 * https://realpython.com/len-python-function/
 * https://docs.python.org/3/library/stdtypes.html#str.isdigit
