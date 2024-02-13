@@ -1,4 +1,7 @@
-![Header](pands-weekly-tasks/Images/readme_header.png)
+<picture align="center">
+    <img alt="README Logo" src="https://raw.githubusercontent.com/TindraIS/pands-weekly-tasks/main/Images/readme_header.png">
+</picture>
+
 
 ###### __This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU__
 
