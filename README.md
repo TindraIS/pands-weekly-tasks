@@ -1,4 +1,4 @@
-![Header](https://raw.githubusercontent.com/tindrais/pands-weekly-tasks/Images/readme_header.png)
+![Header](pands-weekly-tasks/Images/readme_header.png)
 
 ###### __This repository contains the solutions for the weekly tasks done of Programme & Scripting module @ ATU__
 
