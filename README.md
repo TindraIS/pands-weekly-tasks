@@ -9,10 +9,10 @@
 ## Table of contents
 
 * [Weekly Tasks](#Weekly-Tasks)
-    * [helloworld.py](#01:-helloworldpy)
-    * [bank.py](#02:-bankpy)
-    * [accounts.py](#03:-accountspy)
-    * [collatz.py](#04:-collatzpy)
+    * [helloworld.py](#01-helloworldpy)
+    * [bank.py](#02-bankpy)
+    * [accounts.py](#03-accountspy)
+    * [collatz.py](#04-collatzpy)
 
 <br>
 
