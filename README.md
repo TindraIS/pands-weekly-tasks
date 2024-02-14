@@ -9,10 +9,10 @@
 ## Table of contents
 
 * [Weekly Tasks](#Weekly-Tasks)
-    * [helloworld.py](#01-helloworldpy)
-    * [bank.py](#02-bankpy)
-    * [accounts.py](#03-accountspy)
-    * [collatz.py](#04-collatzpy)
+    * [01: helloworld.py](#01-helloworldpy)
+    * [02: bank.py](#02-bankpy)
+    * [03: accounts.py](#03-accountspy)
+    * [04: collatz.py](#04-collatzpy)
 
 <br>
 
@@ -101,3 +101,10 @@ which contains a few examples with while loops.
 <br>
 
 ---
+
+### 04: collatz.py
+
+    Ask the user to input any positive integer and outputs the successive values of the following calculation.
+    At each step calculate the next value by taking the current value and, if it is even, divide it by two, but 
+    if it is odd, multiply it by three and add one.
+    End the program if the current value is one.
