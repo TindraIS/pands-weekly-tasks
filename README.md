@@ -80,8 +80,7 @@ Problem solving approach based on a [Stack Overflow question](https://stackoverf
 
 
 ##### Rationale
-Problem solving approach based on the ```len()``` function article in [Real Python](https://realpython.com/len-python-function/)
-which contains a few examples with while loops.
+Problem solving approach based on the ```len()``` function article in [Real Python](https://realpython.com/len-python-function/) which contains a few examples with while loops. Having some experience with JS coding, I was already familiarised with while loops, so the logic came naturally when looking through the documentation of week 3's topics.
 
 
 ##### References
