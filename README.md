@@ -1,6 +1,7 @@
-<div align="center">
-<img src="https://raw.githubusercontent.com/TindraIS/pands-weekly-tasks/main/Images/readme_header.png" align="center" style="width: 100%" />
-</div>  
+<picture align="center">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/TindraIS/pands-weekly-tasks/main/Images/readme-header-dark.png">
+  <img alt="Pandas Logo" src="https://raw.githubusercontent.com/TindraIS/pands-weekly-tasks/main/Images/readme-header-light.png">
+</picture>
 
 
 ###### __This repository contains the solutions for the weekly tasks of Programme & Scripting module @ ATU__
