@@ -28,12 +28,9 @@ today = date.today().strftime('%A')
 # print(today)
 
 # Use a for loop to go through the weekend list
-for day in weekend:
-    if today != day:
-        print('Yes, unfortunately today is a weekday.')
-        # I know you mentioned you don't like the break statement, 
-        # but it's efficient here to get out of the loop on the first True :)
-        break
-    # If the statement is false and today is in fact one of them days in the weekend list
-    else:
-        print('It is the weekend, yay!')
+if today in weekend:
+    print('It is the weekend, yay!')
+    
+# If the statement is false and today is in fact one of them days in the weekend list
+else:
+    print('Yes, unfortunately today is a weekday.')
