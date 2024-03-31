@@ -6,12 +6,13 @@ Description:
     - Formula: root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 1. 
 Author: Irina Simoes
 Date created: 09/03/2024
-Version: 1.0
+Version: 1.1
 References:
     * https://stackoverflow.com/questions/19473770/how-to-avoid-floating-point-errors
     * https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/
     * https://en.wikipedia.org/wiki/Newton%27s_method
     * https://patrickwalls.github.io/mathematicalpython/root-finding/newton/
+    * https://realpython.com/python-f-strings/#formatting-strings-with-pythons-f-string
 ----------------------------------------------------------------------
 ''' 
 
@@ -54,4 +55,4 @@ def sqrt(guessed_sqrt):
 input_value = read_number()
 square_root = sqrt(input_value)
 
-print(f'The square root of {input_value} is approx. {square_root}')
+print(f'The square root of {input_value} is approx. {square_root:.2f}')
