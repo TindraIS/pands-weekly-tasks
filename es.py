@@ -2,8 +2,9 @@
 ----------------------------------------------------------------------
 Name: es.py
 Description: 
-    - This program reads in a text file and outputs the number of e's it contains
-    - The program also takes the filename from an argument on the command line. 
+    - This program searches a topic on Wikipedia, saves the summary in a text file, 
+    and outputs the occurrences of the letter 'e'.
+    - The program also takes the filename and search query from an argument on the command line. 
 Author: Irina Simoes
 Date created: 01/04/2024
 Version: 2.0
