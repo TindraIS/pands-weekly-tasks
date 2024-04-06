@@ -26,18 +26,28 @@ import wikipedia as wiki
 import os
 import argparse
 
+
 ####### FUNCTION 1 #######
 # Define function that gets the summary text of a given Wikipedia page and saves it in a txt file
 def wikipedia_page_to_txt(QUERY, FILENAME):
     # Wrap the code in a try statement in case an error occurs while fetching the Wikipedia page
     try:
-        # Declare variable that will store the search query
-        search_results = wiki.search(QUERY) 
-        print(search_results)
-
-        # Get the summary of the first result 
-        summary = wiki.summary(search_results[1],sentences=10) 
-        #print(f'Summary: \n{summary}')
+        # Declare container for Wikipedia's search results for the query specified in the cmd line
+        search_results = wiki.search(QUERY)
+        # While running the program with different queries, I've noticed that some of the pages do not have a summary, 
+        # so indexing the first result could potentially throw an error, depending on the query. To address this issue,
+        # the program loops through the search results until it finds a page with a summary.
+        for result in search_results:
+            try:
+                summary = wiki.summary(result)
+                # If a summary is successfully fetched, break out of the loop
+                break
+            except wiki.exceptions.PageError:
+                # If no summary is available for the result being looped, continue to the next
+                continue
+        # This else block is computed if no break occurred, indicating no summary was found for the query
+        else:
+            print(f"No summary available for any search results of '{QUERY}. Please try again with another query'.")
     
     # As per Wikipedia Python's library official documentation referenced above, define an exception 
     # block to handle any errors that may occur:
