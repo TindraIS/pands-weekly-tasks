@@ -6,7 +6,7 @@ Description:
     - The program also takes the filename from an argument on the command line. 
 Author: Irina Simoes
 Date created: 01/04/2024
-Version: 1.0
+Version: 2.0
 References:
     * https://medium.com/codex/26-python-tricks-to-show-off-to-your-colleagues-397587769b4c
     * https://wikipedia.readthedocs.io/en/latest/code.html#api
@@ -134,5 +134,5 @@ try:
     count_char(FILENAME,LETTER)
 
 except: 
-    # Print a help message, including the program usage and information about the arguments defined with the ArgumentParser.
+    # Print a help message, including the program usage and information about the arguments defined with the ArgumentParser
     parser.print_help()
