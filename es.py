@@ -15,6 +15,10 @@ References:
     * https://docs.python.org/3/library/functions.html#open
     * https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
     * https://realpython.com/read-write-files-python/
+    * https://realpython.com/command-line-interfaces-python-argparse/
+    * https://stackoverflow.com/questions/1009860/how-can-i-read-and-process-parse-command-line-arguments
+    * https://docs.python.org/3/howto/argparse.html
+    # https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
 ----------------------------------------------------------------------
 ''' 
 
@@ -22,16 +26,17 @@ import wikipedia as wiki
 import os
 import argparse
 
-# Function 1: define function that gets the summary text of a given Wikipedia page and saves it in a txt file
-def wikipedia_page_to_txt(query, FILENAME):
+# FUNCTION 1
+# Define function that gets the summary text of a given Wikipedia page and saves it in a txt file
+def wikipedia_page_to_txt(QUERY, FILENAME):
     # Wrap the code in a try statement in case an error occurs while fetching the Wikipedia page
     try:
         # Declare variable that will store the search query
-        search_results = wiki.search(query) 
+        search_results = wiki.search(QUERY) 
 
         # Get the summary of the first result 
-        summary = wiki.summary(search_results[0]) 
-        print(f'Summary: \n{summary}')
+        summary = wiki.summary(search_results[1],sentences=10) 
+        #print(f'Summary: \n{summary}')
     
     # As per Wikipedia Python's library official documentation referenced above, define an exception 
     # block to handle any errors that may occur:
@@ -57,17 +62,48 @@ def wikipedia_page_to_txt(query, FILENAME):
         # "utf-8" is specified as it's the modern de-facto standard.
         with open(FILENAME, 'w', encoding='utf-8') as writer:
             writer.write(summary)
-            print(f'Wikipedia page about {query}: {FILENAME}')
-
-# Function 2: define function that gets the summary text of a given Wikipedia page and saves it in a txt file
-def move_txt_directory():
-
-# Function 3: define function to count the occurrences of the letter 'e' in a txt file
-def count_letter_e(FILENAME):
+            #print(f'Wikipedia page about {query}: {FILENAME}')
 
 
-# Main code
-FILENAME = 'python_programming_language.txt'
-query = 'python programming language'
+# FUNCTION 2
+# Define function that counts occurrences of letter parsed in cmd line
+def count_char(FILENAME, LETTER):
+    char = LETTER.lower()       # Convert letter to uppercase as Python is case-sensitive
+    total_count = 0             # Initialise counter
 
-wikipedia_page_to_txt(query, FILENAME)
+    # Open file in reading mode
+    with open(FILENAME, "rt", encoding="utf8") as file:
+        # Iterate through each character with a for loop
+        for line in file:
+            total_count += line.lower().count(char) # Again convert line to lowercase and count occurrences of the character parsed in cmd line
+    
+    print(f'The letter "{LETTER}" appears {total_count} times in {FILENAME}.')
+
+
+# MAIN CODE
+# Initialise the ArgumentParser object, will allows for cmd line arguments to be defined
+parser = argparse.ArgumentParser(
+    prog="es.py",
+    description="This script counts the occurrences of the letter e.",
+    epilog="Thanks for using %(prog)s! :)")
+
+# Define arguments
+parser.add_argument("-f", "--file", type=str, required=False, help='text file name with extension, eg.: "moby_dick.txt"')
+parser.add_argument("-q", "--query", type=str, required=False, help="file's topic which will searched in Wikipedia")
+args = parser.parse_args()
+
+# Declare variables 
+FILENAME = args.file  # Assign the filename provided in the cmd line to FILENAME
+QUERY = args.query    # Assign the query provided in the cmd line to QUERY
+LETTER = 'e'          # Define a default letter 
+
+# Wrap functions in -try-except statement
+try:
+    # Call the Wikipedia function using the parsed arguments
+    wikipedia_page_to_txt(QUERY, FILENAME)
+
+    # Call the counter function using the parsed arguments and the default letter
+    count_char(FILENAME,LETTER)
+
+except: 
+    print('\nERROR: arguments missing.\n')
