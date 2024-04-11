@@ -32,18 +32,18 @@ normal_values_list = np.random.normal(5,2,1000)
 #print(normal_values_list)
 
 # Get the function h_function values
-h_function = []
-for number in range(0,11): # 
+h_function_list = []
+for number in range(0,11): # Set the range ending in 11 in order to get 10 valies
     value = number ** 3
-    h_function.append(value)
+    h_function_list.append(value)
 
 # Following matplotlib sample code referenced above, create a figure and only one axis of the subplot
 fig, ax1 = plt.subplots()
 
 # Create the histogram with the distribution of the normal values
 color = '#01153E'
-ax1.set_xlabel('Values in Common',fontsize=8)                  
-ax1.set_ylabel('Normal Distribution Values', color=color, fontsize=8)
+ax1.set_xlabel('Values in Common',fontsize=8)                           # Set x-label which will be shared for both normal_values_list and h_function_list    
+ax1.set_ylabel('Normal Distribution Values', color=color, fontsize=8)   # Set y-label normal_values_list    
 ax1.hist(normal_values_list, 
          bins=10, 
          edgecolor='white', 
@@ -57,8 +57,8 @@ ax2 = ax1.twinx()
 
 # Create the plot with the h(x) function
 color = 'tomato'
-ax2.set_ylabel('$h(x)$ Values', color=color, fontsize=8)        # Label only set for the other y axis, as the x-label has been handled in ax1
-ax2.plot(h_function, 
+ax2.set_ylabel('$h(x)$ Values', color=color, fontsize=8)                # Set label only for the other y axis, as the x-label has been handled in ax1
+ax2.plot(h_function_list, 
          color=color, 
          alpha=0.7,
          linestyle='--', 
