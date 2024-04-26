@@ -45,5 +45,3 @@ arr.append(str(1))
 # To reproduce the output as in the example given by Andrew, use the join() method to combine all the numbers
 # into a single string without the brackets
 print(" ".join(arr))
-
-        
