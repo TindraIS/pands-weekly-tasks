@@ -21,9 +21,9 @@ References:
 
 ----------------------------------------------------------------------
 ''' 
-
-import numpy as np
-import matplotlib.pyplot as plt
+# Import required libraries
+import numpy as np                  # Numpy to create the random list
+import matplotlib.pyplot as plt     # Matplotlib to create the visualisation
 
 # Generate list of 1000 values with numpy with a mean of 5 and a std of 2
 # As Ian had already showed us in one of the lectures the random module and the different distributions,
@@ -41,34 +41,34 @@ for number in range(0,11): # Set the range ending in 11 in order to get 10 valie
 fig, ax1 = plt.subplots()
 
 # Create the histogram with the distribution of the normal values
-color = '#01153E'
+color = '#01153E'                                                       # Store color in a variable for better readibility
 ax1.set_xlabel('Values in Common',fontsize=8)                           # Set x-label which will be shared for both normal_values_list and h_function_list    
 ax1.set_ylabel('Normal Distribution Values', color=color, fontsize=8)   # Set y-label normal_values_list    
-ax1.hist(normal_values_list, 
-         bins=10, 
-         edgecolor='white', 
-         alpha=0.9,
-         label='Normal Distribution List', 
-         color=color)
-ax1.tick_params(axis='y', labelcolor=color)
+ax1.hist(normal_values_list,                                            # Plot list of normal values in a histogram
+         bins=10,                                                       # Define number of bins as 10
+         edgecolor='white',                                             # Set edge color as white so that bins are delimited
+         alpha=0.9,                                                     # Set transparency
+         label='Normal Distribution List',                              # Set label
+         color=color)                                                   # Define color
+ax1.tick_params(axis='y', labelcolor=color)                             # Set left y-axis ticks and color
 
 # Instantiate the second axes for the h(x) function which shares the same x-axis 
 ax2 = ax1.twinx()  
 
 # Create the plot with the h(x) function
-color = 'tomato'
+color = 'tomato'                                                        # Store color in a variable for better readibility
 ax2.set_ylabel('$h(x)$ Values', color=color, fontsize=8)                # Set label only for the other y axis, as the x-label has been handled in ax1
-ax2.plot(h_function_list, 
-         color=color, 
-         alpha=0.7,
-         linestyle='--', 
-         marker='H', 
-         label='$h(x) = x^3$ Function')
-ax2.tick_params(axis='y', labelcolor=color)
+ax2.plot(h_function_list,                                               # Plot the function
+         color=color,                                                   # Define color
+         alpha=0.7,                                                     # Set transparency
+         linestyle='--',                                                # Set a dashed line
+         marker='H',                                                    # Set hexagon marker
+         label='$h(x) = x^3$ Function')                                 # Set label with inline math expression delimited by $           
+ax2.tick_params(axis='y', labelcolor=color)                             # Set right y-axis ticks and color
 
 # Customize the plot
-plt.title('Normal Distribution and $h(x) = x^3$ Function\n')
-fig.tight_layout() # Otherwise the right y-label is slightly clipped
+plt.title('Normal Distribution and $h(x) = x^3$ Function\n')            # Define plot's title
+fig.tight_layout()                                                      # Set tight layout as per matplotlib reference above so that the right y-label isn't clipped
 
 # Show the plot
 plt.show()
