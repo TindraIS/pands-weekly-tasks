@@ -13,6 +13,7 @@ References:
     * https://en.wikipedia.org/wiki/Newton%27s_method
     * https://patrickwalls.github.io/mathematicalpython/root-finding/newton/
     * https://realpython.com/python-f-strings/#formatting-strings-with-pythons-f-string
+    * https://regex101.com/
 ----------------------------------------------------------------------
 ''' 
 
