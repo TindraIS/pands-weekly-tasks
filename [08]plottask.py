@@ -18,6 +18,8 @@ References:
     * https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions
     * https://matplotlib.org/stable/users/explain/colors/colors.html#sphx-glr-users-explain-colors-colors-py
     * https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.markers
+    * https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf
+    * https://matplotlib.org/stable/users/explain/text/annotations.html
 
 ----------------------------------------------------------------------
 ''' 
@@ -50,7 +52,28 @@ ax1.hist(normal_values_list,                                            # Plot l
          alpha=0.9,                                                     # Set transparency
          label='Normal Distribution List',                              # Set label
          color=color)                                                   # Define color
-ax1.tick_params(axis='y', labelcolor=color)                             # Set left y-axis ticks and color
+
+# Create histogram annotation as per the referenced matplotlib cheatsheet
+ax1.annotate('Highest value bin',           # Set annotation text to show the highest value bin
+    xy=(np.mean(normal_values_list), 
+        np.max(normal_values_list)),        # Set the mean of the values on the x-axis and max value on the y-axis so that the label show for the highest bin
+    xytext=(0, 15),                         # Place the annotation text 20 points above the xy location.
+    textcoords='offset points',             # Set textcoords to points so that the xytext above specified can be read my matplotlob
+    arrowprops=dict(
+        arrowstyle="simple",                # Specifiy the style of the arrow connecting the text to the point
+        connectionstyle='arc3',             # Set the param for the path connecting the two points
+        color='white'),                       # Define the arrow color  
+    size=8,                                 # Define text size
+    color="white",                          # Define text color
+    bbox=dict(                              # Customise text box style, background color& transparency, and edge color
+        boxstyle='round,pad=0.5', 
+        facecolor='green',  
+        alpha=0.8, 
+        edgecolor='0.5')
+)
+
+ # Set left y-axis ticks and color
+ax1.tick_params(axis='y', labelcolor=color)                            
 
 # Instantiate the second axes for the h(x) function which shares the same x-axis 
 ax2 = ax1.twinx()  
@@ -68,6 +91,7 @@ ax2.tick_params(axis='y', labelcolor=color)                             # Set ri
 
 # Customize the plot
 plt.title('Normal Distribution and $h(x) = x^3$ Function\n')            # Define plot's title
+plt.style.use('Solarize_Light2')
 fig.tight_layout()                                                      # Set tight layout as per matplotlib reference above so that the right y-label isn't clipped
 
 # Show the plot
