@@ -27,7 +27,7 @@ def read_number(message = "Please enter a positive floating-point number: "):
         user_input = input(message)
 
         # Verify if the input meets the below conditions:
-        # It matches the regex pattern for a positive floating-point number: digbits, decimal point, digits
+        # It matches the regex pattern for a positive floating-point number: digits, decimal point, digits
         # It's greater than 0
         if (re.match(r"^\d+\.\d+",user_input) and float(user_input) > 0):
             break # If the above conditions are true break out of the loop
